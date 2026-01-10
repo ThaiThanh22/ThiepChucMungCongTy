@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="vi" class="h-full">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Year End Party 2026 - Việt Nhật Cần Thơ</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:w…;family=Montserrat:wght@300;400;500;600;700&amp;display=swap"
+    rel="stylesheet">
+  <style>
+    body {
+      box-sizing: border-box;
+    }
+
+    .font-playfair {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .font-montserrat {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0) rotate(0deg);
+      }
+
+      50% {
+        transform: translateY(-20px) rotate(5deg);
+      }
+    }
+
+    @keyframes twinkle {
+
+      0%,
+      100% {
+        opacity: 0.3;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 1;
+        transform: scale(1.2);
+      }
+    }
+
+    @keyframes growLine {
+      0% {
+        height: 0;
+      }
+
+      100% {
+        height: 100%;
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes shimmer {
+      0% {
+        background-position: -200% center;
+      }
+
+      100% {
+        background-position: 200% center;
+      }
+    }
+
+    @keyframes firework {
+      0% {
+        transform: scale(0);
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 1;
+      }
+
+      100% {
+        transform: scale(1.5);
+        opacity: 0;
+      }
+    }
+
+    .animate-float {
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .animate-float-delayed {
+      animation: float 8s ease-in-out infinite 2s;
+    }
+
+    .animate-twinkle {
+      animation: twinkle 2s ease-in-out infinite;
+    }
+
+    .animate-grow {
+      animation: growLine 2s ease-out forwards;
+    }
+
+    .animate-fade-in {
+      animation: fadeInUp 1s ease-out forwards;
+    }
+
+    .animate-shimmer {
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+      background-size: 200% 100%;
+      animation: shimmer 3s infinite;
+    }
+
+    .firework-burst {
+      animation: firework 2s ease-out infinite;
+    }
+
+    .golden-border {
+      border: 2px solid;
+      border-image: linear-gradient(135deg, #c9a227, #f4d03f, #c9a227) 1;
+    }
+
+    .text-shadow-elegant {
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .bg-pattern {
+      background-image:
+        radial-gradient(circle at 20% 80%, rgba(0, 128, 1, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(0, 0, 128, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(201, 162, 39, 0.03) 0%, transparent 70%);
+    }
+
+    .leaf-pattern::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 10 Q60 30 50 50 Q40 30 50 10' fill='%23008001' opacity='0.03'/%3E%3C/svg%3E");
+      background-size: 60px 60px;
+      pointer-events: none;
+    }
+  </style>
+  <style>
+    @view-transition {
+      navigation: auto;
+    }
+  </style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+</head>
+
+<body class="h-full font-montserrat">
+  <div id="invitation-wrapper" class="h-full w-full overflow-auto bg-pattern leaf-pattern relative"
+    style="background: linear-gradient(180deg, #fafdf7 0%, #f0f7ec 50%, #e8f4e0 100%);"><!-- Decorative Elements -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none"><!-- Floating Leaves -->
+      <svg class="absolute top-10 left-10 w-16 h-16 animate-float opacity-20" viewbox="0 0 100 100">
+        <path d="M50 5 Q80 25 75 60 Q50 90 25 60 Q20 25 50 5" fill="#008001" />
+        <path d="M50 15 Q50 50 50 75" stroke="#006601" stroke-width="2" fill="none" />
+      </svg>
+      <svg class="absolute top-20 right-20 w-12 h-12 animate-float-delayed opacity-15" viewbox="0 0 100 100">
+        <path d="M50 5 Q80 25 75 60 Q50 90 25 60 Q20 25 50 5" fill="#008001" />
+      </svg>
+      <svg class="absolute bottom-40 left-20 w-14 h-14 animate-float opacity-15" viewbox="0 0 100 100">
+        <ellipse cx="50" cy="50" rx="40" ry="25" fill="#008001" opacity="0.5" />
+        <path d="M50 25 Q50 50 50 75" stroke="#006601" stroke-width="2" fill="none" />
+      </svg><!-- Firework bursts -->
+      <div class="absolute top-16 right-32">
+        <div class="w-2 h-2 bg-yellow-400 rounded-full firework-burst" style="animation-delay: 0s;"></div>
+      </div>
+      <div class="absolute top-24 left-40">
+        <div class="w-1.5 h-1.5 bg-yellow-300 rounded-full firework-burst" style="animation-delay: 0.5s;"></div>
+      </div>
+      <div class="absolute top-32 right-48">
+        <div class="w-2 h-2 bg-amber-400 rounded-full firework-burst" style="animation-delay: 1s;"></div>
+      </div>
+      <div class="absolute top-20 left-60">
+        <div class="w-1 h-1 bg-yellow-200 rounded-full firework-burst" style="animation-delay: 1.5s;"></div>
+      </div><!-- Sparkle stars -->
+      <svg class="absolute top-28 left-24 w-4 h-4 animate-twinkle" viewbox="0 0 24 24" style="animation-delay: 0.3s;">
+        <path d="M12 0L14 10L24 12L14 14L12 24L10 14L0 12L10 10Z" fill="#c9a227" />
+      </svg>
+      <svg class="absolute top-16 right-40 w-3 h-3 animate-twinkle" viewbox="0 0 24 24" style="animation-delay: 0.8s;">
+        <path d="M12 0L14 10L24 12L14 14L12 24L10 14L0 12L10 10Z" fill="#f4d03f" />
+      </svg>
+      <svg class="absolute top-36 left-48 w-3 h-3 animate-twinkle" viewbox="0 0 24 24" style="animation-delay: 1.2s;">
+        <path d="M12 0L14 10L24 12L14 14L12 24L10 14L0 12L10 10Z" fill="#c9a227" />
+      </svg><!-- Growth lines / DNA helix pattern -->
+      <svg class="absolute left-8 top-1/4 w-8 h-40 opacity-10" viewbox="0 0 40 200">
+        <path d="M20 0 Q35 50 20 100 Q5 150 20 200" stroke="#008001" stroke-width="2" fill="none" />
+        <path d="M20 0 Q5 50 20 100 Q35 150 20 200" stroke="#000080" stroke-width="2" fill="none" />
+        <circle cx="20" cy="50" r="3" fill="#008001" />
+        <circle cx="20" cy="100" r="3" fill="#000080" />
+        <circle cx="20" cy="150" r="3" fill="#008001" />
+      </svg>
+      <svg class="absolute right-8 top-1/3 w-8 h-40 opacity-10" viewbox="0 0 40 200">
+        <path d="M20 0 Q35 50 20 100 Q5 150 20 200" stroke="#008001" stroke-width="2" fill="none" />
+        <path d="M20 0 Q5 50 20 100 Q35 150 20 200" stroke="#000080" stroke-width="2" fill="none" />
+      </svg><!-- Field pattern at bottom -->
+      <svg class="absolute bottom-0 left-0 w-full h-32 opacity-10" viewbox="0 0 800 100" preserveaspectratio="none">
+        <path d="M0 80 Q100 60 200 80 Q300 100 400 80 Q500 60 600 80 Q700 100 800 80 L800 100 L0 100 Z"
+          fill="#008001" />
+        <path d="M0 90 Q100 70 200 90 Q300 100 400 90 Q500 70 600 90 Q700 100 800 90 L800 100 L0 100 Z"
+          fill="#006601" />
+      </svg>
+    </div><!-- Main Content -->
+    <div class="relative z-10 min-h-full flex flex-col items-center justify-center px-4 py-8">
+      <div class="w-full max-w-2xl"><!-- Card Container -->
+        <div class="bg-white/90 backdrop-blur-sm rounded-3xl shadow-2xl overflow-hidden"
+          style="box-shadow: 0 25px 80px rgba(0,128,1,0.15), 0 10px 30px rgba(0,0,128,0.1);"><!-- Top Decorative Bar -->
+          <div class="h-2" style="background: linear-gradient(90deg, #008001, #000080, #008001);"></div>
+          <!-- Header Section -->
+          <div class="relative px-6 pt-8 pb-6 text-center"
+            style="background: linear-gradient(180deg, rgba(0,128,1,0.05) 0%, transparent 100%);">
+            <!-- Corner Ornaments -->
+            <svg class="absolute top-4 left-4 w-12 h-12 opacity-30" viewbox="0 0 50 50">
+              <path d="M5 25 Q5 5 25 5" stroke="#c9a227" stroke-width="2" fill="none" />
+              <path d="M10 25 Q10 10 25 10" stroke="#c9a227" stroke-width="1" fill="none" />
+              <circle cx="8" cy="8" r="2" fill="#c9a227" />
+            </svg>
+            <svg class="absolute top-4 right-4 w-12 h-12 opacity-30" viewbox="0 0 50 50">
+              <path d="M45 25 Q45 5 25 5" stroke="#c9a227" stroke-width="2" fill="none" />
+              <path d="M40 25 Q40 10 25 10" stroke="#c9a227" stroke-width="1" fill="none" />
+              <circle cx="42" cy="8" r="2" fill="#c9a227" />
+            </svg>
+            
+            <!-- Logo -->
+            <div class="mb-4 flex justify-center">
+              <div class="w-20 h-20 rounded-full bg-white shadow-lg p-1 border-2 border-green-100 overflow-hidden">
+                <img src="https://vietnhatcantho.vn/wp-content/uploads/2025/10/Chua-co-ten-182-x-47-px.png">
+              </div>
+            </div>
+            
+            <!-- Company Name -->
+            <p class="text-xs tracking-widest uppercase mb-2" style="color: #008001;">Công ty TNHH TMDV Quốc Tế</p>
+            <h2 class="font-playfair text-2xl font-bold mb-1" style="color: #000080;">VIỆT NHẬT</h2>
+            <p class="text-xs tracking-wider" style="color: #666;">Chi Nhánh Cần Thơ</p><!-- Divider -->
+            <div class="flex items-center justify-center gap-3 my-4">
+              <div class="h-px w-16" style="background: linear-gradient(90deg, transparent, #c9a227);"></div>
+              <svg class="w-4 h-4" viewbox="0 0 24 24">
+                <path d="M12 2L14 8L20 8L15 12L17 18L12 14L7 18L9 12L4 8L10 8Z" fill="#c9a227" />
+              </svg>
+              <div class="h-px w-16" style="background: linear-gradient(90deg, #c9a227, transparent);"></div>
+            </div><!-- Invitation Title -->
+            <p class="text-sm tracking-widest uppercase mb-2" style="color: #888;">Trân Trọng Kính Mời</p>
+            <h1 class="font-playfair text-4xl md:text-5xl font-bold text-shadow-elegant mb-2"
+              style="background: linear-gradient(135deg, #008001, #000080); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+              YEAR END PARTY</h1>
+            <p class="font-playfair text-2xl italic" style="color: #c9a227;">2026</p>
+          </div><!-- Content Section -->
+          <div class="px-6 py-6"><!-- Special Guest -->
+            <div class="text-center mb-6 p-4 rounded-2xl"
+              style="background: linear-gradient(135deg, rgba(0,128,1,0.05), rgba(0,0,128,0.05));">
+              <p class="text-xs tracking-widest uppercase mb-2" style="color: #888;">Khách Mời Đặc Biệt</p>
+              <p class="font-playfair text-lg font-semibold" style="color: #000080;" id="guest-title">Tổng Giám Đốc Công
+                ty Quốc Tế Việt Nhật</p>
+              <p class="font-playfair text-2xl font-bold mt-1" style="color: #008001;" id="guest-name">Mr. Trần Công
+                Nhật</p>
+            </div><!-- Event Details -->
+            <div class="space-y-4 mb-6"><!-- Time -->
+              <div class="flex items-start gap-4 p-4 rounded-xl bg-white shadow-sm border border-green-50">
+                <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0"
+                  style="background: linear-gradient(135deg, #008001, #006601);">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10" stroke-width="2" />
+                    <path d="M12 6v6l4 2" stroke-width="2" stroke-linecap="round" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-xs tracking-widest uppercase mb-1" style="color: #888;">Thời Gian</p>
+                  <p class="font-semibold" style="color: #000080;"><span class="text-green-700">18h</span> đón khách –
+                    <span class="text-green-700">19h</span> bắt đầu tiệc</p>
+                  <p class="font-playfair text-lg font-bold" style="color: #008001;" id="event-date">Ngày 31/01/2026</p>
+                </div>
+              </div><!-- Location -->
+              <div class="flex items-start gap-4 p-4 rounded-xl bg-white shadow-sm border border-green-50">
+                <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0"
+                  style="background: linear-gradient(135deg, #000080, #000060);">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                    <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                      stroke-width="2" />
+                    <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-width="2" />
+                  </svg>
+                </div>
+                <div class="flex-1">
+                  <p class="text-xs tracking-widest uppercase mb-1" style="color: #888;">Địa Điểm</p>
+                  <p class="font-playfair text-xl font-bold" style="color: #008001;" id="venue-name">Vó Sông Farm</p>
+                  <p class="text-sm text-gray-600 mb-2">45f Đ. Trương Vĩnh Nguyên, Thường Thạnh, Cái Răng, Cần Thơ</p><a
+                    href="https://www.google.com/maps/place/V%C3%93+S%C3%94NG+FARM+-+…%C3%81I+%E1%BA%A8M+TH%E1%BB%B0C/@9.9935655,105.7552202,17.5z"
+                    target="_blank" rel="noopener noreferrer"
+                    class="inline-flex items-center gap-2 text-sm font-medium px-3 py-1.5 rounded-full transition-all hover:shadow-md"
+                    style="background: linear-gradient(135deg, #ea4335, #fbbc05); color: white;">
+                    <svg class="w-4 h-4" viewbox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                    </svg> Xem Google Maps </a>
+                </div>
+              </div><!-- Program Highlight -->
+              <div class="flex items-start gap-4 p-4 rounded-xl bg-white shadow-sm border border-green-50">
+                <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0"
+                  style="background: linear-gradient(135deg, #c9a227, #f4d03f);">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                    <path
+                      d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-xs tracking-widest uppercase mb-1" style="color: #888;">Chương Trình</p>
+                  <p class="font-semibold" style="color: #000080;">Vinh danh &amp; Trao thưởng</p>
+                  <p class="text-sm" style="color: #008001;">Nhân viên xuất sắc năm 2025</p>
+                </div>
+              </div>
+            </div><!-- Check-in Note -->
+            <div class="text-center p-4 rounded-xl mb-6"
+              style="background: linear-gradient(135deg, rgba(201,162,39,0.1), rgba(244,208,63,0.1)); border: 1px dashed #c9a227;">
+              <div class="flex items-center justify-center gap-2 mb-1">
+                <svg class="w-5 h-5" viewbox="0 0 24 24" fill="#c9a227">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                </svg><span class="text-sm font-semibold" style="color: #c9a227;">LƯU Ý QUAN TRỌNG</span>
+              </div>
+              <p class="text-sm" style="color: #666;">Check-in đúng giờ để có tên trong danh sách <span
+                  class="font-bold" style="color: #008001;">VÒNG QUAY TRÚNG THƯỞNG</span></p>
+            </div><!-- Dress Code -->
+            <div class="text-center mb-6">
+              <p class="text-xs tracking-widest uppercase mb-3" style="color: #888;">Dress Code</p>
+              <div class="flex items-center justify-center gap-4">
+                <div class="flex items-center gap-2">
+                  <div class="w-8 h-8 rounded-full border-2 border-gray-200 shadow-inner" style="background: #000080;">
+                  </div><span class="text-xs font-medium text-gray-600">Navy Blue</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <div class="w-8 h-8 rounded-full border-2 border-gray-200 shadow-inner" style="background: #008001;">
+                  </div><span class="text-xs font-medium text-gray-600">Green</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <div class="w-8 h-8 rounded-full border-2 border-gray-200 shadow-inner"
+                    style="background: #ffffff; border-color: #ddd;"></div><span
+                    class="text-xs font-medium text-gray-600">White</span>
+                </div>
+              </div>
+            </div>
+          </div><!-- Footer Section -->
+          <div class="px-6 py-6 text-center"
+            style="background: linear-gradient(180deg, transparent, rgba(0,128,1,0.05));"><!-- Decorative Divider -->
+            <div class="flex items-center justify-center gap-3 mb-4">
+              <div class="h-px w-20" style="background: linear-gradient(90deg, transparent, #008001);"></div>
+              <svg class="w-6 h-6" viewbox="0 0 50 50">
+                <path d="M25 5 Q35 15 35 25 Q35 35 25 45 Q15 35 15 25 Q15 15 25 5" fill="none" stroke="#008001"
+                  stroke-width="2" />
+                <path d="M25 15 Q25 25 25 35" stroke="#008001" stroke-width="1" />
+                <circle cx="25" cy="25" r="3" fill="#c9a227" />
+              </svg>
+              <div class="h-px w-20" style="background: linear-gradient(90deg, #008001, transparent);"></div>
+            </div><!-- Slogan -->
+            <p class="font-semibold text-sm mb-1" style="color: #000080;">Công ty TNHH TMDV Quốc Tế Việt Nhật – Chi
+              Nhánh Cần Thơ</p>
+            <p class="font-playfair text-xl italic font-semibold" style="color: #008001;">"Phát Triển Cùng Nhà Nông"</p>
+            <!-- Bottom Ornament -->
+            <div class="mt-4 flex justify-center">
+              <svg class="w-24 h-6" viewbox="0 0 100 20">
+                <path d="M0 10 Q25 0 50 10 Q75 20 100 10" stroke="#c9a227" stroke-width="1" fill="none" />
+                <circle cx="50" cy="10" r="3" fill="#c9a227" />
+                <circle cx="25" cy="7" r="2" fill="#008001" />
+                <circle cx="75" cy="13" r="2" fill="#000080" />
+              </svg>
+            </div>
+          </div><!-- Bottom Decorative Bar -->
+          <div class="h-2" style="background: linear-gradient(90deg, #008001, #c9a227, #000080);"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const defaultConfig = {
+      guest_name: 'Mr. Trần Công Nhật',
+      event_date: 'Ngày 31/01/2026',
+      venue_name: 'Vó Sông Farm',
+      background_color: '#f0f7ec',
+      primary_color: '#008001',
+      secondary_color: '#000080',
+      accent_color: '#c9a227',
+      text_color: '#333333',
+      font_family: 'Playfair Display'
+    };
+
+    async function onConfigChange(config) {
+      const guestNameEl = document.getElementById('guest-name');
+      const eventDateEl = document.getElementById('event-date');
+      const venueNameEl = document.getElementById('venue-name');
+
+      if (guestNameEl) {
+        guestNameEl.textContent = config.guest_name || defaultConfig.guest_name;
+        guestNameEl.style.color = config.primary_color || defaultConfig.primary_color;
+      }
+
+      if (eventDateEl) {
+        eventDateEl.textContent = config.event_date || defaultConfig.event_date;
+        eventDateEl.style.color = config.primary_color || defaultConfig.primary_color;
+      }
+
+      if (venueNameEl) {
+        venueNameEl.textContent = config.venue_name || defaultConfig.venue_name;
+        venueNameEl.style.color = config.primary_color || defaultConfig.primary_color;
+      }
+
+      const customFont = config.font_family || defaultConfig.font_family;
+      const baseFontStack = 'serif';
+      document.querySelectorAll('.font-playfair').forEach(el => {
+        el.style.fontFamily = `${customFont}, ${baseFontStack}`;
+      });
+    }
+
+    function mapToCapabilities(config) {
+      return {
+        recolorables: [
+          {
+            get: () => config.background_color || defaultConfig.background_color,
+            set: (value) => {
+              config.background_color = value;
+              window.elementSdk.setConfig({ background_color: value });
+            }
+          },
+          {
+            get: () => config.primary_color || defaultConfig.primary_color,
+            set: (value) => {
+              config.primary_color = value;
+              window.elementSdk.setConfig({ primary_color: value });
+            }
+          },
+          {
+            get: () => config.secondary_color || defaultConfig.secondary_color,
+            set: (value) => {
+              config.secondary_color = value;
+              window.elementSdk.setConfig({ secondary_color: value });
+            }
+          },
+          {
+            get: () => config.accent_color || defaultConfig.accent_color,
+            set: (value) => {
+              config.accent_color = value;
+              window.elementSdk.setConfig({ accent_color: value });
+            }
+          },
+          {
+            get: () => config.text_color || defaultConfig.text_color,
+            set: (value) => {
+              config.text_color = value;
+              window.elementSdk.setConfig({ text_color: value });
+            }
+          }
+        ],
+        borderables: [],
+        fontEditable: {
+          get: () => config.font_family || defaultConfig.font_family,
+          set: (value) => {
+            config.font_family = value;
+            window.elementSdk.setConfig({ font_family: value });
+          }
+        },
+        fontSizeable: undefined
+      };
+    }
+
+    function mapToEditPanelValues(config) {
+      return new Map([
+        ['guest_name', config.guest_name || defaultConfig.guest_name],
+        ['event_date', config.event_date || defaultConfig.event_date],
+        ['venue_name', config.venue_name || defaultConfig.venue_name]
+      ]);
+    }
+
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities,
+        mapToEditPanelValues
+      });
+    }
+  </script>
+  <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'9bba3063b18de60e',t:'MTc2ODAyNzI5MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
+</body>
+
+</html>
