@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thư Mời YEP 2025 - Việt Nhật Luxury</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
@@ -18,7 +21,11 @@
             --text-dark: #1a1a1a;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         body {
             font-family: 'Montserrat', sans-serif;
@@ -35,16 +42,20 @@
         /* --- BACKGROUND LAYERS --- */
         #canvas-fireworks {
             position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             z-index: 0;
             pointer-events: none;
         }
 
         .agri-pattern {
             position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             z-index: -1;
             opacity: 0.08;
             /* Họa tiết Hexagon kết hợp lá - tượng trưng nông nghiệp công nghệ cao */
@@ -64,10 +75,10 @@
             border-radius: 24px;
             padding: 50px 30px;
             text-align: center;
-            box-shadow: 
+            box-shadow:
                 0 20px 60px rgba(0, 77, 0, 0.15),
                 inset 0 0 0 1px rgba(255, 255, 255, 0.6);
-            border: 1px solid rgba(255,255,255,0.8);
+            border: 1px solid rgba(255, 255, 255, 0.8);
             margin: 40px 0;
             overflow: hidden;
         }
@@ -76,18 +87,23 @@
         .card::before {
             content: '';
             position: absolute;
-            top: 0; left: 0; right: 0;
+            top: 0;
+            left: 0;
+            right: 0;
             height: 6px;
             background: var(--gold-gradient);
         }
 
         /* --- CONTENT STYLING --- */
-        
+
         /* Logo */
-        .logo-box { margin-bottom: 20px; }
+        .logo-box {
+            margin-bottom: 20px;
+        }
+
         .logo-box img {
             max-height: 100px;
-            filter: drop-shadow(0 5px 5px rgba(0,0,0,0.1));
+            filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.1));
         }
 
         /* Typography */
@@ -99,9 +115,9 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 5px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
         }
-        
+
         .year-text {
             font-family: 'Playfair Display', serif;
             font-size: 4rem;
@@ -113,9 +129,10 @@
             position: relative;
             display: inline-block;
         }
-        
+
         /* Trang trí 2 bên năm 2025 */
-        .year-text::before, .year-text::after {
+        .year-text::before,
+        .year-text::after {
             content: '★';
             font-size: 1.5rem;
             color: var(--navy-blue);
@@ -131,12 +148,14 @@
             padding: 25px;
             border-radius: 12px;
             margin-bottom: 35px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
             position: relative;
         }
+
         .vip-badge {
             position: absolute;
-            top: -12px; left: 20px;
+            top: -12px;
+            left: 20px;
             background: var(--navy-blue);
             color: #fff;
             padding: 4px 12px;
@@ -146,6 +165,7 @@
             border-radius: 20px;
             letter-spacing: 1px;
         }
+
         .guest-name {
             font-family: 'Playfair Display', serif;
             font-size: 1.8rem;
@@ -153,6 +173,7 @@
             margin: 10px 0 5px;
             font-weight: 700;
         }
+
         .guest-role {
             font-size: 0.95rem;
             color: #555;
@@ -168,18 +189,25 @@
             margin-bottom: 35px;
             text-align: left;
         }
+
         .info-row {
             display: flex;
             align-items: flex-start;
             padding: 15px;
-            background: rgba(255,255,255,0.6);
+            background: rgba(255, 255, 255, 0.6);
             border-radius: 10px;
             transition: transform 0.3s;
         }
-        .info-row:hover { transform: translateY(-3px); background: #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
-        
+
+        .info-row:hover {
+            transform: translateY(-3px);
+            background: #fff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
         .icon-box {
-            width: 45px; height: 45px;
+            width: 45px;
+            height: 45px;
             background: var(--emerald-primary);
             color: #fff;
             border-radius: 50%;
@@ -191,6 +219,7 @@
             flex-shrink: 0;
             box-shadow: 0 4px 10px rgba(0, 128, 1, 0.3);
         }
+
         .text-box h4 {
             color: var(--navy-blue);
             font-size: 1rem;
@@ -198,9 +227,17 @@
             text-transform: uppercase;
             font-weight: 700;
         }
-        .text-box p { font-size: 0.95rem; color: #444; }
-        .highlight-date { font-weight: 700; color: var(--emerald-primary); }
-        
+
+        .text-box p {
+            font-size: 0.95rem;
+            color: #444;
+        }
+
+        .highlight-date {
+            font-weight: 700;
+            color: var(--emerald-primary);
+        }
+
         .map-btn {
             display: inline-block;
             margin-top: 8px;
@@ -217,11 +254,13 @@
             font-style: italic;
             margin-bottom: 30px;
         }
+
         .slogan {
             margin-top: 40px;
             padding-top: 25px;
-            border-top: 1px solid rgba(0,0,0,0.1);
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
         }
+
         .slogan h3 {
             font-size: 1.2rem;
             background: var(--gold-gradient);
@@ -231,7 +270,12 @@
             font-weight: 800;
             letter-spacing: 2px;
         }
-        .company-sub { font-size: 0.85rem; color: #888; margin-bottom: 5px; }
+
+        .company-sub {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 5px;
+        }
 
         /* Dresscode Minimalist */
         .dresscode-mini {
@@ -243,25 +287,120 @@
             padding: 10px 20px;
             border-radius: 50px;
             display: inline-flex;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             margin-bottom: 10px;
         }
-        .dc-label { font-size: 0.8rem; font-weight: 700; color: var(--navy-blue); margin-right: 5px; }
-        .dc-dot { width: 25px; height: 25px; border-radius: 50%; border: 2px solid #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+
+        .dc-label {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--navy-blue);
+            margin-right: 5px;
+        }
+
+        .dc-dot {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
 
         /* Responsive */
         @media(min-width: 600px) {
-            .info-grid { grid-template-columns: 1fr 1fr; }
-            .info-row:last-child { grid-column: span 2; }
+            .info-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .info-row:last-child {
+                grid-column: span 2;
+            }
         }
+
         @media(max-width: 450px) {
-            h1.title { font-size: 2.2rem; }
-            .year-text { font-size: 2.8rem; }
-            .card { padding: 30px 20px; width: 95%; }
-            .year-text::before, .year-text::after { display: none; }
+            h1.title {
+                font-size: 2.2rem;
+            }
+
+            .year-text {
+                font-size: 2.8rem;
+            }
+
+            .card {
+                padding: 30px 20px;
+                width: 95%;
+            }
+
+            .year-text::before,
+            .year-text::after {
+                display: none;
+            }
+        }
+
+        /* Vinyl Record Styles */
+        .vinyl-record {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #000 30%, #333 70%, #000 100%);
+            margin: 20px auto;
+            position: relative;
+            border: 5px solid #222;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .record-center {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 2px solid #000;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .vinyl-record.spin {
+            animation: spin 2s linear infinite;
+        }
+
+        /* Music Overlay */
+        .music-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .start-music-btn {
+            background: var(--gold-accent);
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .start-music-btn:hover {
+            background: linear-gradient(135deg, #bf953f, #fcf6ba);
         }
     </style>
 </head>
+
 <body>
 
     <div class="agri-pattern"></div>
@@ -269,7 +408,8 @@
 
     <div class="card">
         <div class="logo-box">
-             <img src="https://vieclamcantho.com.vn/public/upload/nhatuyendung/cong-ty-tnhh-tm-dv-quoc-te-viet-nhat4641738920003.jpg" alt="Logo">
+            <img src="https://vieclamcantho.com.vn/public/upload/nhatuyendung/cong-ty-tnhh-tm-dv-quoc-te-viet-nhat4641738920003.jpg"
+                alt="Logo">
         </div>
 
         <h1 class="title">YEAR END PARTY</h1>
@@ -290,7 +430,7 @@
                     <p class="highlight-date">31/01/2026</p>
                 </div>
             </div>
-            
+
             <div class="info-row">
                 <div class="icon-box"><i class="fas fa-glass-cheers"></i></div>
                 <div class="text-box">
@@ -305,7 +445,8 @@
                 <div class="text-box" style="width: 100%;">
                     <h4>Địa Điểm: Vó Sông Farm</h4>
                     <p>45f Đ. Trương Vĩnh Nguyên, Cái Răng, Cần Thơ</p>
-                    <a href="https://www.google.com/maps/search/?api=1&query=Vó+Sông+Farm+Cần+Thơ" target="_blank" class="map-btn">
+                    <a href="https://www.google.com/maps/search/?api=1&query=Vó+Sông+Farm+Cần+Thơ" target="_blank"
+                        class="map-btn">
                         <i class="fas fa-location-arrow"></i> Chỉ đường Google Maps
                     </a>
                 </div>
@@ -320,7 +461,7 @@
         </div>
 
         <p class="note">
-            <i class="fas fa-info-circle" style="color: var(--gold-accent);"></i> 
+            <i class="fas fa-info-circle" style="color: var(--gold-accent);"></i>
             Quý khách vui lòng check-in đúng giờ để tham gia vòng quay may mắn.
         </p>
 
@@ -328,15 +469,29 @@
             <p class="company-sub">Công ty TNHH TMDV Quốc Tế Việt Nhật – Chi Nhánh Cần Thơ</p>
             <h3>Phát Triển Cùng Nhà Nông</h3>
         </div>
+
+        <audio autoplay loop controls style="margin-top: 20px;">
+            <source src="/xuancantho.mp3" type="audio/mpeg">
+            Trình duyệt của bạn không hỗ trợ thẻ audio.
+        </audio>
+
+        <div class="vinyl-record" id="vinylRecord">
+            <div class="record-center"></div>
+        </div>
+    </div>
+
+    <div id="musicOverlay" class="music-overlay">
+        <button id="startMusicBtn" class="start-music-btn">Bắt đầu nhạc</button>
     </div>
 
     <script>
+
         // --- LOGIC PHÁO HOA CANVAS (Nhẹ & Đẹp) ---
         const canvas = document.getElementById('canvas-fireworks');
         const ctx = canvas.getContext('2d');
         let width = window.innerWidth;
         let height = window.innerHeight;
-        
+
         canvas.width = width;
         canvas.height = height;
 
@@ -355,7 +510,7 @@
                 this.color = color;
                 // Vận tốc ngẫu nhiên bung ra
                 const angle = Math.random() * Math.PI * 2;
-                const speed = Math.random() * 3 + 1; 
+                const speed = Math.random() * 3 + 1;
                 this.vx = Math.cos(angle) * speed;
                 this.vy = Math.sin(angle) * speed;
                 this.alpha = 1; // Độ mờ
@@ -393,9 +548,9 @@
                 x = width - Math.random() * (width * 0.3); // Bên phải
             }
             const y = Math.random() * (height * 0.5);
-            
+
             const color = colors[Math.floor(Math.random() * colors.length)];
-            
+
             // Tạo 40-60 hạt cho mỗi vụ nổ
             for (let i = 0; i < 50; i++) {
                 particles.push(new Particle(x, y, color));
@@ -405,7 +560,7 @@
         // Loop animation
         function animate() {
             // Tạo hiệu ứng vệt mờ (trail effect)
-            ctx.fillStyle = 'rgba(240, 255, 244, 0.2)'; 
+            ctx.fillStyle = 'rgba(240, 255, 244, 0.2)';
             ctx.fillRect(0, 0, width, height);
 
             particles.forEach((p, index) => {
@@ -427,6 +582,38 @@
         // Kích hoạt pháo hoa ngay khi mở
         setTimeout(createFirework, 500);
         setTimeout(createFirework, 1000);
+
+        // Music Overlay and Vinyl Control
+        const overlay = document.getElementById('musicOverlay');
+        const startBtn = document.getElementById('startMusicBtn');
+        const audio = document.querySelector('audio');
+        const vinyl = document.getElementById('vinylRecord');
+
+        startBtn.addEventListener('click', () => {
+            audio.play();
+            overlay.style.display = 'none';
+            vinyl.classList.add('spin');
+        });
+
+        // Hide overlay if autoplay succeeds
+        audio.addEventListener('play', () => {
+            overlay.style.display = 'none';
+            vinyl.classList.add('spin');
+        });
+
+        audio.addEventListener('pause', () => {
+            vinyl.classList.remove('spin');
+        });
+
+        // Try to play on load (in case autoplay works)
+        window.addEventListener('load', () => {
+            audio.play().catch(() => {
+                // Overlay remains if blocked
+            });
+        });
     </script>
+
+
 </body>
+
 </html>
