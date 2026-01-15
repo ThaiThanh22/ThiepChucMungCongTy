@@ -246,7 +246,7 @@
         /* VIP Guest Box */
         .highlight-box {
             background: linear-gradient(to bottom right, #ffffff, #f4fcf6); /* Nền trắng pha xanh rất nhẹ */
-            padding: 30px 20px; margin-bottom: 35px;
+            padding: 30px 20px; margin-bottom: 50px;
             border: 1px solid var(--gold-light);
             border-left: 5px solid var(--emerald-rich); /* Điểm nhấn xanh lá */
             box-shadow: 0 5px 15px rgba(0, 102, 34, 0.05);
@@ -269,11 +269,17 @@
         .timeline-list { list-style: none; }
         .timeline-list li {
             position: relative; padding-left: 25px; margin-bottom: 14px;
-            font-size: 1.05rem; color: #444; display: flex; align-items: center;
+            font-size: 1.05rem; color: #444; text-align: left;
+            /* white-space: nowrap; */
+            /* overflow: hidden; */
         }
         /* Icon đầu dòng timeline */
         .timeline-list li::before { 
             content: '❖'; color: var(--gold-main); position: absolute; left: 0; font-size: 1.1rem; top: 2px; 
+        }
+        .timeline-list li strong {
+            margin-right: 10px;
+            display: inline;
         }
 
         .details-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 35px 0; }
@@ -324,6 +330,48 @@
             .branch-tl, .branch-br { width: 200px; height: 200px; }
             .btn-open { font-size: 1.3rem; padding: 18px 40px; }
             .gate-panel::before { background-size: 100px 100px; }
+            .program-timeline { padding: 10px 15px; }
+            .timeline-list li { font-size: 1rem; }
+            .detail-content { font-size: 1.2rem; }
+            .detail-sub { font-size: 0.9rem; }
+            .slogan h3 { font-size: 1rem; }
+            .highlight-box { margin-bottom: 40px; }
+        }
+
+        /* Tablet optimizations */
+        @media (max-width: 768px) {
+            .card { max-width: 90%; padding: 45px 30px; }
+            .gate-year { font-size: 8rem; letter-spacing: 10px; }
+            .btn-open { font-size: 1.4rem; padding: 20px 50px; }
+            .branch-tl, .branch-br { width: 250px; height: 250px; }
+            .details-grid { gap: 18px; }
+        }
+
+        /* Small phone optimizations */
+        @media (max-width: 480px) {
+            h1.main-title { font-size: 2.4rem; }
+            .year-deco { font-size: 3.2rem; }
+            .card { padding: 30px 15px; outline-offset: 1px; outline-width: 1px; }
+            .guest-name { font-size: 1.8rem; }
+            .gate-year { font-size: 5rem; letter-spacing: 3px; top: 40%; }
+            .branch-tl, .branch-br { width: 150px; height: 150px; }
+            .btn-open { font-size: 1.2rem; padding: 16px 35px; }
+            .highlight-box { padding: 25px 15px; }
+            .program-timeline { padding: 10px 10px; }
+            .timeline-list li { font-size: 0.95rem; padding-left: 20px; }
+            .detail-item { padding: 15px; }
+            .detail-content { font-size: 1.1rem; }
+            .detail-sub { font-size: 0.85rem; }
+            .circles { gap: 10px; }
+            .circle { width: 28px; height: 28px; }
+            .slogan h3 { font-size: 0.85rem; margin-top: 10px; }
+            .slogan p { font-size: 0.8rem; margin-bottom: 10px; }
+        }
+
+        /* Performance optimizations for mobile */
+        @media (max-width: 768px) {
+            .card-sheen { display: none; } /* Disable sheen animation on mobile for performance */
+            .petal { animation-duration: 8s; } /* Slower petals for better performance */
         }
     </style>
 </head>
@@ -374,11 +422,11 @@
                     <i class="fas fa-scroll" style="color: var(--gold-main); margin-right: 10px; font-size: 1.3rem;"></i> Nội Dung Chương Trình
                 </div>
                 <ul class="timeline-list">
-                    <li><strong>18:00 - 18:30: </strong> Đón khách & Chụp ảnh</li>
-                    <li><strong>19:00: </strong> Khai mạc & Báo cáo tổng kết</li>
-                    <li><strong>19:30: </strong> Vinh danh nhân viên xuất sắc</li>
-                    <li><strong>19:45: </strong> Khai tiệc & Giao lưu âm nhạc</li>
-                    <li><strong style="color: var(--emerald-rich);">21:00: </strong> Bốc thăm may mắn (Lucky Draw)</li>
+                    <li><strong>18:00:</strong>Đón khách - check-in</li>
+                    <li><strong>19:00:</strong>Khai mạc, báo cáo</li>
+                    <li><strong>19:30:</strong>Vinh danh nhân viên</li>
+                    <li><strong>19:45:</strong>Khai tiệc, giao lưu nhạc</li>
+                    <li><strong style="color: var(--emerald-rich);">21:00: </strong>Bốc thăm may mắn</li>
                 </ul>
             </div>
 
@@ -412,6 +460,7 @@
 
             <div class="slogan">
                 <p style="margin-bottom: 5px; font-weight: 500;">Công ty TNHH TMDV Quốc Tế Việt Nhật</p>
+                <p style="margin-bottom: 5px; font-weight: 500;">Chi Nhánh Cần Thơ</p>
                 <h3>Phát Triển Cùng Nhà Nông</h3>
             </div>
         </div>
@@ -523,8 +572,9 @@
             const actualX = x || Math.random() * width;
             const actualY = y || Math.random() * (height * 0.5);
             const color = fwColors[Math.floor(Math.random() * fwColors.length)];
-            // Số lượng hạt pháo hoa
-            for (let i = 0; i < 50; i++) particles.push(new Particle(actualX, actualY, color));
+            // Số lượng hạt pháo hoa - giảm trên mobile
+            const particleCount = width < 768 ? 30 : 50;
+            for (let i = 0; i < particleCount; i++) particles.push(new Particle(actualX, actualY, color));
         }
 
         function animate() {
@@ -534,8 +584,9 @@
                 if (p.alpha <= 0) particles.splice(index, 1);
             });
             
-            // Pháo hoa ngẫu nhiên khi cửa đã mở
-            if (document.body.classList.contains('gate-opened') && Math.random() < 0.02) {
+            // Pháo hoa ngẫu nhiên khi cửa đã mở - giảm tần suất trên mobile
+            const randomChance = width < 768 ? 0.01 : 0.02;
+            if (document.body.classList.contains('gate-opened') && Math.random() < randomChance) {
                 createFirework();
             }
             requestAnimationFrame(animate);
