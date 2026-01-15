@@ -315,6 +315,7 @@
         .circle:hover { transform: scale(1.15); }
         
         .slogan { margin-top: 45px; padding-top: 25px; border-top: 1px solid rgba(0,0,0,0.08); }
+        .slogan p { font-size: 0.95rem; color: #666; font-weight: 500; }
         .slogan h3 {
             background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
             text-transform: uppercase; font-size: 1.1rem; letter-spacing: 3px; font-weight: 800;
@@ -325,7 +326,14 @@
             .year-deco { font-size: 3.8rem; }
             .details-grid { grid-template-columns: 1fr; gap: 15px;}
             .card { padding: 40px 20px; margin: 20px 0; width: 95%; outline-offset: 2px; outline-width: 2px;}
-            .guest-name { font-size: 2rem; }
+            .guest-title { font-size: 0.7rem; letter-spacing: 2px; margin-bottom: 8px; }
+            .guest-name { font-size: 1.5rem; }
+            .role-text { font-size: 0.8rem; margin-top: 4px; }
+            .company-text { font-size: 0.8rem; }
+            .slogan p { font-size: 0.8rem; }
+            .slogan h3 { font-size: 0.85rem; letter-spacing: 2px; }
+            .timeline-header { font-size: 1.05rem; margin-bottom: 15px; }
+            .timeline-header i { font-size: 1.2rem; }
             .gate-year { font-size: 6rem; letter-spacing: 5px; top: 35%;}
             .branch-tl, .branch-br { width: 200px; height: 200px; }
             .btn-open { font-size: 1.3rem; padding: 18px 40px; }
@@ -334,8 +342,7 @@
             .timeline-list li { font-size: 1rem; }
             .detail-content { font-size: 1.2rem; }
             .detail-sub { font-size: 0.9rem; }
-            .slogan h3 { font-size: 1rem; }
-            .highlight-box { margin-bottom: 40px; }
+            .highlight-box { margin-bottom: 40px; padding: 20px 15px; }
         }
 
         /* Tablet optimizations */
@@ -352,11 +359,18 @@
             h1.main-title { font-size: 2.4rem; }
             .year-deco { font-size: 3.2rem; }
             .card { padding: 30px 15px; outline-offset: 1px; outline-width: 1px; }
-            .guest-name { font-size: 1.8rem; }
+            .guest-title { font-size: 0.65rem; letter-spacing: 1.5px; margin-bottom: 6px; }
+            .guest-name { font-size: 1.3rem; }
+            .role-text { font-size: 0.7rem; margin-top: 3px; }
+            .company-text { font-size: 0.7rem; }
+            .slogan p { font-size: 0.7rem; }
+            .slogan h3 { font-size: 0.75rem; letter-spacing: 1.5px; }
+            .timeline-header { font-size: 0.95rem; margin-bottom: 12px; }
+            .timeline-header i { font-size: 1rem; }
             .gate-year { font-size: 5rem; letter-spacing: 3px; top: 40%; }
             .branch-tl, .branch-br { width: 150px; height: 150px; }
             .btn-open { font-size: 1.2rem; padding: 16px 35px; }
-            .highlight-box { padding: 25px 15px; }
+            .highlight-box { padding: 20px 12px; }
             .program-timeline { padding: 10px 10px; }
             .timeline-list li { font-size: 0.95rem; padding-left: 20px; }
             .detail-item { padding: 15px; }
@@ -366,6 +380,14 @@
             .circle { width: 28px; height: 28px; }
             .slogan h3 { font-size: 0.85rem; margin-top: 10px; }
             .slogan p { font-size: 0.8rem; margin-bottom: 10px; }
+        }
+
+        /* Extra small phone optimizations */
+        @media (max-width: 375px) {
+            .timeline-list li { font-size: 0.85rem; padding-left: 18px; margin-bottom: 10px; }
+            .timeline-header { font-size: 0.9rem; }
+            .program-timeline { padding: 8px 8px; }
+            .card { padding: 25px 12px; }
         }
 
         /* Performance optimizations for mobile */
