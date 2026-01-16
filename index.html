@@ -1057,13 +1057,15 @@
                 const userData = allData[subdomain];
 
                 if (userData) {
+                    if (userData === "vietnhatcantho") {
+                        document.getElementById('user-name').innerText = "Trần Công Nhật"
+                        document.getElementById('user-position').innerText = "Tổng Giám Đốc"
+                        document.getElementById('user-company').innerText = "Quốc Tế Việt Nhật"
+                    }
                     document.getElementById('user-name').innerText = userData.name;
                     document.getElementById('user-position').innerText = userData.position;
                     document.getElementById('user-company').innerText = userData.company;
                 } else {
-                    if (userData === "vietnhatcantho") {
-                        document.getElementById('user-name').innerText = "Trần Công Nhật"
-                    }
                     document.getElementById('user-name').innerText = "Kính mời quý khách!";
                 }
             } catch (error) {
