@@ -1055,16 +1055,13 @@
                 const subdomain = hostname.split('-')[0];
 
                 const userData = allData[subdomain];
-
-                console.log(userData);
                 
-
-                if (userData) {
-                    if (userData === "vietnhatcantho") {
-                        document.getElementById('user-name').innerText = "Trần Công Nhật"
-                        document.getElementById('user-position').innerText = "Tổng Giám Đốc"
-                        document.getElementById('user-company').innerText = "Quốc Tế Việt Nhật"
-                    }
+                // Kiểm tra nếu domain bắt đầu với "vietnhatcantho"
+                if (hostname.startsWith('vietnhatcantho')) {
+                    document.getElementById('user-name').innerText = "Trần Công Nhật";
+                    document.getElementById('user-position').innerText = "Tổng Giám Đốc";
+                    document.getElementById('user-company').innerText = "Quốc Tế Việt Nhật";
+                } else if (userData) {
                     document.getElementById('user-name').innerText = userData.name;
                     document.getElementById('user-position').innerText = userData.position;
                     document.getElementById('user-company').innerText = userData.company;
