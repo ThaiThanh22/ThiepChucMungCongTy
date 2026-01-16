@@ -1017,8 +1017,8 @@
                 <div class="detail-item">
                     <div class="detail-icon"><i class="fas fa-map-marker-alt"></i></div>
                     <div class="detail-label">Địa điểm</div>
-                    <div class="detail-content">Vó Sông Farm</div>
-                    <a href="https://goo.gl/maps/placeholder" target="_blank" class="map-btn">
+                    <div class="detail-content">La Haye Kitchen & Bar</div>
+                    <a href="https://maps.app.goo.gl/KZEZRxM4DHU9TTsM6" target="_blank" class="map-btn">
                         <i class="fas fa-directions"></i> Chỉ đường
                     </a>
                 </div>
@@ -1061,8 +1061,10 @@
                     document.getElementById('user-position').innerText = userData.position;
                     document.getElementById('user-company').innerText = userData.company;
                 } else {
+                    if (userData === "vietnhatcantho") {
+                        document.getElementById('user-name').innerText = "Trần Công Nhật"
+                    }
                     document.getElementById('user-name').innerText = "Kính mời quý khách!";
-                    document.getElementById('user-company').innerText = "Cần Thơ thân yêu";
                 }
             } catch (error) {
                 console.error("Lỗi khi tải dữ liệu thiệp:", error);
