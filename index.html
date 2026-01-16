@@ -1049,24 +1049,51 @@
                 const response = await fetch('data.json');
                 const allData = await response.json();
 
-                // Lấy tên miền hiện tại (ví dụ: nguyenvana-thiepmoi.vercel.app)
+                // Lấy tên miền hiện tại (ví dụ: yepvietnhatcantho-mrtrancongnhat.vercel.app)
                 const hostname = window.location.hostname;
-                // Tách lấy phần 'nguyenvana'
-                const subdomain = hostname.split('-')[0];
-
-                const userData = allData[subdomain];
                 
-                // Kiểm tra nếu domain bắt đầu với "vietnhatcantho"
-                if (hostname.startsWith('vietnhatcantho')) {
-                    document.getElementById('user-name').innerText = "Trần Công Nhật";
-                    document.getElementById('user-position').innerText = "Tổng Giám Đốc";
-                    document.getElementById('user-company').innerText = "Quốc Tế Việt Nhật";
-                } else if (userData) {
-                    document.getElementById('user-name').innerText = userData.name;
-                    document.getElementById('user-position').innerText = userData.position;
-                    document.getElementById('user-company').innerText = userData.company;
+                // Kiểm tra nếu domain theo cấu trúc "yepvietnhatcantho-[mr/ms][username]"
+                if (hostname.includes('yepvietnhatcantho-')) {
+                    // Tách phần sau "yepvietnhatcantho-"
+                    const parts = hostname.split('yepvietnhatcantho-')[1];
+                    
+                    if (parts) {
+                        // Extract mr/ms và tên
+                        let salutation = '';
+                        let userKey = '';
+                        
+                        if (parts.startsWith('mr')) {
+                            salutation = 'Mr.';
+                            userKey = parts.substring(2).split('.')[0];
+                        } else if (parts.startsWith('ms')) {
+                            salutation = 'Ms.';
+                            userKey = parts.substring(2).split('.')[0];
+                        }
+                        
+                        // Tìm dữ liệu từ file data.json theo userKey
+                        const userData = allData[userKey];
+                        
+                        if (userData) {
+                            // Hiển thị tên với tiền tố Mr./Ms.
+                            document.getElementById('user-name').innerText = salutation + ' ' + userData.name;
+                            document.getElementById('user-position').innerText = userData.position;
+                            document.getElementById('user-company').innerText = userData.company;
+                        } else {
+                            document.getElementById('user-name').innerText = "Kính mời quý khách!";
+                        }
+                    }
                 } else {
-                    document.getElementById('user-name').innerText = "Kính mời quý khách!";
+                    // Cách cũ: tách lấy phần đầu tiên từ hostname
+                    const subdomain = hostname.split('-')[0];
+                    const userData = allData[subdomain];
+                    
+                    if (userData) {
+                        document.getElementById('user-name').innerText = userData.name;
+                        document.getElementById('user-position').innerText = userData.position;
+                        document.getElementById('user-company').innerText = userData.company;
+                    } else {
+                        document.getElementById('user-name').innerText = "Kính mời quý khách!";
+                    }
                 }
             } catch (error) {
                 console.error("Lỗi khi tải dữ liệu thiệp:", error);
