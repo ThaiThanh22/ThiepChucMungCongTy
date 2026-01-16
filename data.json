@@ -1,12 +1,17 @@
 {
   "buithanhthai": {
-    "name": "Thanh Thái",
+    "name": "Bùi Thanh Thái",
     "position": "Nhân Viên Marketing",
     "company": "Việt Nhật Cần Thơ"
   },
   "trancongnhat": {
     "name": "Trần Công Nhật",
     "position": "Tổng Giám Đốc",
+    "company": "Quốc Tế Việt Nhật"
+  },
+  "nguyenhoangvy": {
+    "name": "Nguyễn Hoàng Vỹ",
+    "position": "Nhân Viên Marketing",
     "company": "Quốc Tế Việt Nhật"
   }
 }
