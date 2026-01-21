@@ -477,18 +477,10 @@
         }
 
         .guest-name.long-name {
-            font-size: 1.1rem;
-            /* Giảm tiếp */
-            white-space: nowrap;
-            /* Bắt buộc không xuống dòng */
+            font-size: 1.35rem;
+            /* Revert lại: Thu nhỏ vừa phải */
             letter-spacing: -0.5px;
-            word-spacing: -1px;
-            padding: 0;
-            line-height: 1.3;
-            width: 100%;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            /* Nếu vẫn tràn thì hiện dấu ... thay vì vỡ layout, nhưng font nhỏ sẽ ngăn việc này */
+            /* Giữ lại khoảng cách chữ hẹp */
         }
 
         .role-text {
@@ -713,9 +705,7 @@
             }
 
             .guest-name.long-name {
-                font-size: 0.7rem;
-                /* Mobile: Giảm cực nhỏ cho tên dài */
-                letter-spacing: -0.5px;
+                font-size: 0.95rem;
             }
 
             .guest-name.very-long-name {
@@ -847,7 +837,7 @@
             }
 
             .guest-name.long-name {
-                font-size: 0.65rem;
+                font-size: 0.85rem;
             }
 
             .guest-name.very-long-name {
@@ -1021,7 +1011,7 @@
                 <p class="guest-title">Trân Trọng Kính Mời</p>
                 <span class="role-text" id="user-position">Tổng Giám Đốc</span>
                 <span class="company-text" id="user-company">Quốc Tế Việt Nhật</span>
-                <h2 class="guest-name" id="user-name">Ms. Trần Công Nhật</h2>
+                <h2 class="guest-name">Ms. Trần Công Nhật</h2>
             </div>
 
             <div class="program-timeline">
