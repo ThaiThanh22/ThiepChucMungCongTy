@@ -4,15 +4,25 @@
     "position": "Tổng Giám Đốc",
     "company": "Quốc Tế Việt Nhật"
   },
-  "buithanhthai": {
-    "name": "Bùi Thanh Thái",
-    "position": "Nhân Viên Marketing",
-    "company": "Việt Nhật Cần Thơ"
-  },
   "hoangtinh": {
     "name": "Hoàng Tình",
     "position": "Giám đốc công ty",
     "company": "Công Nghệ Nông Nghiệp Toàn Cầu"
+  },
+  "doanmanhnam": {
+    "name": "Đoàn Mạnh Nam",
+    "position": "Giám Đốc Chi Nhánh Cần Thơ",
+    "company": "Việt Nhật Cần Thơ"
+  },
+  "nguyenthingocyen": {
+    "name": "Nguyễn Thị Ngọc Yến",
+    "position": "Cố Vấn Marketing",
+    "company": "Việt Nhật Cần Thơ"
+  },
+  "buithanhthai": {
+    "name": "Bùi Thanh Thái",
+    "position": "Nhân Viên Marketing",
+    "company": "Việt Nhật Cần Thơ"
   },
   "duongphucthien": {
     "name": "Dương Phúc Thiên",
@@ -27,6 +37,81 @@
   "nguyenthicuc": {
     "name": "Nguyễn Thị Cúc",
     "position": "Nhân Viên Sale",
+    "company": "Việt Nhật Cần Thơ"
+  },
+  "tranthituyetanh": {
+    "name": "Trần Thị Tuyết Anh",
+    "position": "Nhân Viên Sale",
+    "company": "Việt Nhật Cần Thơ"
+  },
+  "danghoangphuongtrinh": {
+    "name": "Đặng Hoàng Phương Trinh",
+    "position": "Nhân Viên Sale",
+    "company": "Việt Nhật Cần Thơ"
+  },
+  "nguyenvantruong": {
+    "name": "Nguyễn Văn Trường",
+    "position": "Nhân Viên Sale",
+    "company": "Việt Nhật Cần Thơ"
+  },
+  "dokimhue": {
+    "name": "Đỗ Kim Huệ",
+    "position": "Nhân Viên Sale",
+    "company": "Việt Nhật Cần Thơ"
+  },
+  "ledoanhdoanh": {
+    "name": "Lê Doanh Doanh",
+    "position": "Nhân Viên Sale",
+    "company": "Việt Nhật Cần Thơ"
+  },
+  "nguyenthihuyentran": {
+    "name": "Nguyễn Thị Huyền Trân",
+    "position": "Nhân Viên Sale",
+    "company": "Việt Nhật Cần Thơ"
+  },
+  "nguyenhoangvy": {
+    "name": "Nguyễn Hoàng Vỹ",
+    "position": "Leader Content Marketing",
+    "company": "Việt Nhật Cần Thơ"
+  },
+  "lytrucgiang": {
+    "name": "Lý Trúc Giang",
+    "position": "Leader CSKH",
+    "company": "Việt Nhật Cần Thơ"
+  },
+  "nguyenthihongsuong": {
+    "name": "Nguyễn Thị Hồng Sương",
+    "position": "Nhân Viên Marketing",
+    "company": "Việt Nhật Cần Thơ"
+  },
+  "tanghonghuyentrang": {
+    "name": "Tăng Hồng Huyền Trang",
+    "position": "Nhân Viên Marketing",
+    "company": "Việt Nhật Cần Thơ"
+  },
+  "tranxuanvy": {
+    "name": "Trần Xuân Vy",
+    "position": "Nhân Viên CSKH",
+    "company": "Việt Nhật Cần Thơ"
+  },
+  "tranngocduyen": {
+    "name": "Trần Ngọc Duyên",
+    "position": "Kế Toán",
+    "company": "Việt Nhật Cần Thơ"
+  },
+  "truongthicamgiang": {
+    "name": "Trương Thị Cẩm Giang",
+    "position": "Kế Toán Kho",
+    "company": "Việt Nhật Cần Thơ"
+  },
+  "lebaotran": {
+    "name": "Lê Bảo Trân",
+    "position": "Nhân Viên Kho",
+    "company": "Việt Nhật Cần Thơ"
+  },
+  "nguyenthikimxuan": {
+    "name": "Nguyễn Thị Kim Xuân",
+    "position": "Nhân Viên Kho",
     "company": "Việt Nhật Cần Thơ"
   }
 }
