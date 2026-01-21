@@ -449,7 +449,8 @@
         .highlight-box {
             background: linear-gradient(to bottom right, #ffffff, #f4fcf6);
             /* Nền trắng pha xanh rất nhẹ */
-            padding: 30px 20px;
+            padding: 30px 10px;
+            /* Giảm padding ngang để tăng diện tích hiển thị tên */
             margin-bottom: 50px;
             border: 1px solid var(--gold-light);
             border-left: 5px solid var(--emerald-rich);
@@ -473,6 +474,21 @@
             color: var(--emerald-deep);
             font-weight: 800;
             margin: 0 0 5px 0;
+        }
+
+        .guest-name.long-name {
+            font-size: 1.1rem;
+            /* Giảm tiếp */
+            white-space: nowrap;
+            /* Bắt buộc không xuống dòng */
+            letter-spacing: -0.5px;
+            word-spacing: -1px;
+            padding: 0;
+            line-height: 1.3;
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            /* Nếu vẫn tràn thì hiện dấu ... thay vì vỡ layout, nhưng font nhỏ sẽ ngăn việc này */
         }
 
         .role-text {
@@ -696,6 +712,16 @@
                 font-size: 1.5rem;
             }
 
+            .guest-name.long-name {
+                font-size: 0.7rem;
+                /* Mobile: Giảm cực nhỏ cho tên dài */
+                letter-spacing: -0.5px;
+            }
+
+            .guest-name.very-long-name {
+                font-size: 1.0rem;
+            }
+
             .role-text {
                 font-size: 0.8rem;
                 margin-top: 4px;
@@ -818,6 +844,14 @@
 
             .guest-name {
                 font-size: 1.3rem;
+            }
+
+            .guest-name.long-name {
+                font-size: 0.65rem;
+            }
+
+            .guest-name.very-long-name {
+                font-size: 0.85rem;
             }
 
             .role-text {
@@ -987,7 +1021,7 @@
                 <p class="guest-title">Trân Trọng Kính Mời</p>
                 <span class="role-text" id="user-position">Tổng Giám Đốc</span>
                 <span class="company-text" id="user-company">Quốc Tế Việt Nhật</span>
-                <h2 class="guest-name" id="user-name">Mr. Trần Công Nhật</h2>
+                <h2 class="guest-name" id="user-name">Ms. Trần Công Nhật</h2>
             </div>
 
             <div class="program-timeline">
@@ -1051,17 +1085,17 @@
 
                 // Lấy tên miền hiện tại (ví dụ: yepvietnhatcantho-mrtrancongnhat.vercel.app)
                 const hostname = window.location.hostname;
-                
+
                 // Kiểm tra nếu domain theo cấu trúc "yepvietnhatcantho-[mr/ms][username]"
                 if (hostname.includes('yepvietnhatcantho-')) {
                     // Tách phần sau "yepvietnhatcantho-"
                     const parts = hostname.split('yepvietnhatcantho-')[1];
-                    
+
                     if (parts) {
                         // Extract mr/ms và tên
                         let salutation = '';
                         let userKey = '';
-                        
+
                         if (parts.startsWith('mr')) {
                             salutation = 'Mr.';
                             userKey = parts.substring(2).split('.')[0];
@@ -1069,15 +1103,22 @@
                             salutation = 'Ms.';
                             userKey = parts.substring(2).split('.')[0];
                         }
-                        
+
                         // Tìm dữ liệu từ file data.json theo userKey
                         const userData = allData[userKey];
-                        
+
                         if (userData) {
                             // Hiển thị tên với tiền tố Mr./Ms.
                             document.getElementById('user-name').innerText = salutation + ' ' + userData.name;
                             document.getElementById('user-position').innerText = userData.position;
                             document.getElementById('user-company').innerText = userData.company;
+
+                            // Kiểm tra độ dài tên để set class phù hợp
+                            const nameStr = userData.name.trim();
+                            // Nếu tên dài > 22 ký tự HOẶC có từ 4 chữ trở lên đều dùng font nhỏ
+                            if (nameStr.length > 20 || nameStr.split(/\s+/).length >= 4) {
+                                document.getElementById('user-name').classList.add('long-name');
+                            }
                         } else {
                             document.getElementById('user-name').innerText = "Kính mời quý khách!";
                         }
@@ -1086,11 +1127,18 @@
                     // Cách cũ: tách lấy phần đầu tiên từ hostname
                     const subdomain = hostname.split('-')[0];
                     const userData = allData[subdomain];
-                    
+
                     if (userData) {
                         document.getElementById('user-name').innerText = userData.name;
                         document.getElementById('user-position').innerText = userData.position;
                         document.getElementById('user-company').innerText = userData.company;
+
+                        // Kiểm tra độ dài tên để set class phù hợp
+                        const nameStr = userData.name.trim();
+                        // Nếu tên dài > 20 ký tự HOẶC có từ 4 chữ trở lên đều dùng font nhỏ
+                        if (nameStr.length > 20 || nameStr.split(/\s+/).length >= 4) {
+                            document.getElementById('user-name').classList.add('long-name');
+                        }
                     } else {
                         document.getElementById('user-name').innerText = "Kính mời quý khách!";
                     }
