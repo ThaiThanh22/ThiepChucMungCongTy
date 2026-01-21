@@ -1,17 +1,32 @@
 {
-  "buithanhthai": {
-    "name": "Bùi Thanh Thái",
-    "position": "Nhân Viên Marketing",
-    "company": "Việt Nhật Cần Thơ"
-  },
   "trancongnhat": {
     "name": "Trần Công Nhật",
     "position": "Tổng Giám Đốc",
     "company": "Quốc Tế Việt Nhật"
   },
+  "buithanhthai": {
+    "name": "Bùi Thanh Thái",
+    "position": "Nhân Viên Marketing",
+    "company": "Việt Nhật Cần Thơ"
+  },
   "hoangtinh": {
     "name": "Hoàng Tình",
     "position": "Giám đốc công ty",
     "company": "Công Nghệ Nông Nghiệp Toàn Cầu"
+  },
+  "duongphucthien": {
+    "name": "Dương Phúc Thiên",
+    "position": "Leader Sale",
+    "company": "Việt Nhật Cần Thơ"
+  },
+  "lephuquy": {
+    "name": "Lê Phú Quý",
+    "position": "Leader Sale",
+    "company": "Việt Nhật Cần Thơ"
+  },
+  "nguyenthicuc": {
+    "name": "Nguyễn Thị Cúc",
+    "position": "Nhân Viên Sale",
+    "company": "Việt Nhật Cần Thơ"
   }
 }
